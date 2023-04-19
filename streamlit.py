@@ -12,7 +12,7 @@ Original file is located at
 import streamlit as st
 
 def largest_of_three_numbers(a,b,c):
-return max(a,b,b)
+return max(a,b,c)
 
 st.title("Find the largest among the three numbers")
 
