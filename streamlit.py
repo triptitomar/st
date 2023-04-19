@@ -7,12 +7,17 @@ Original file is located at
     https://colab.research.google.com/drive/1leRYNYG1hemGk6h_Sz21Jx4iu-QAG7f9
 """
 
-!pip install streamlit -q
+
 
 import streamlit as st
 
-def find_largest(a,b,c):
-  return max(a,b,c)
+def largest_of_three_numbers(a,b,c):
+  if a>b and a>c:
+    return a
+elif b>a and b>c:
+    return b
+else:
+    return c
 
 st.title("Find the largest among the three numbers")
 
@@ -20,8 +25,8 @@ a=st.number_input("enter the first number:")
 b=st.number_input("enter the second number:")
 c=st.number_input("enter the third number:")
 if st.button("find the largest"):
-  largest=find_largest(a,b,c)
-  st.write(f"The largest number is {largest}")
+  result=largest_of_three_numbers(a,b,c)
+  st.success(f"The largest number is {result}")
 
 
 
